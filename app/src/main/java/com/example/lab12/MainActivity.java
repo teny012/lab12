@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
             Request request = new Request.Builder().url(URL).build();
 
-            OkHttpClient okHttpClient = new OkHttpClient();
+            OkHttpClient okHttpClient = UnsafeOkHttpClient.getUnsafeOkHttpClient();
 
             okHttpClient.newCall(request).enqueue(new Callback(){
 
